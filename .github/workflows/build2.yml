@@ -31,3 +31,5 @@ jobs:
           docker push sujatha27/tic-tac-toe:latest
         env:
           DOCKER_CLI_ACI: 1
+      - name: Image scan
+        run: trivy image sujatha27/tic-tac-toe:latest > trivyimage.txt
